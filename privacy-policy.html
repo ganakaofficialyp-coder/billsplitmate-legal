@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — BillSplitMate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green-600: #16a34a;
+      --green-700: #15803d;
+      --green-50:  #f0fdf4;
+      --green-100: #dcfce7;
+      --green-200: #bbf7d0;
+      --grey-900:  #111827;
+      --grey-700:  #374151;
+      --grey-500:  #6b7280;
+      --grey-200:  #e5e7eb;
+      --grey-100:  #f3f4f6;
+      --white:     #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--grey-700);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--green-600) 0%, #0d9944 100%);
+      color: white;
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 99px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 20px;
+    }
+    .app-badge .dot {
+      width: 8px; height: 8px;
+      background: #86efac;
+      border-radius: 50%;
+    }
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    header p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .updated-tag {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--grey-200);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav ul {
+      list-style: none;
+      display: inline-flex;
+      gap: 0;
+    }
+    nav a {
+      display: inline-block;
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--grey-500);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    nav a:hover {
+      color: var(--green-600);
+      border-bottom-color: var(--green-200);
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--green-50);
+      border: 1px solid var(--green-200);
+      border-left: 4px solid var(--green-600);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      color: var(--grey-700);
+    }
+    .highlight strong { color: var(--green-700); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+      animation: fadeUp 0.4s ease both;
+    }
+    section:nth-child(2) { animation-delay: 0.05s; }
+    section:nth-child(3) { animation-delay: 0.1s; }
+    section:nth-child(4) { animation-delay: 0.15s; }
+    section:nth-child(5) { animation-delay: 0.2s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-number {
+      display: inline-block;
+      background: var(--green-100);
+      color: var(--green-700);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--grey-900);
+      margin-bottom: 14px;
+      letter-spacing: -0.2px;
+    }
+    p { margin-bottom: 14px; font-size: 15px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 12px 0 14px 20px;
+      font-size: 15px;
+    }
+    li { margin-bottom: 8px; }
+    li:last-child { margin-bottom: 0; }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 16px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--grey-200);
+    }
+    .data-table th {
+      background: var(--grey-100);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--grey-900);
+      font-size: 13px;
+    }
+    .data-table td {
+      padding: 12px 16px;
+      border-top: 1px solid var(--grey-200);
+      vertical-align: top;
+    }
+    .data-table tr:hover td { background: var(--green-50); }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-green { background: var(--green-100); color: var(--green-700); }
+    .badge-grey  { background: var(--grey-100);  color: var(--grey-500);  }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--green-50);
+      border: 1px solid var(--green-200);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: var(--green-600);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+    .contact-card h3 { font-size: 16px; font-weight: 600; color: var(--grey-900); margin-bottom: 4px; }
+    .contact-card a  { color: var(--green-600); font-weight: 500; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--grey-100);
+      border-top: 1px solid var(--grey-200);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--grey-500);
+    }
+    footer a { color: var(--green-600); text-decoration: none; font-weight: 500; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 12px; flex-wrap: wrap; }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      header { padding: 40px 16px 36px; }
+      main { padding: 32px 16px 60px; }
+      .contact-card { flex-direction: column; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge"><span class="dot"></span> BillSplitMate</div>
+  <h1>Privacy Policy</h1>
+  <p>We believe privacy is a right, not a feature. Here's exactly what we do — and don't do — with your data.</p>
+  <span class="updated-tag">Last updated: January 2025</span>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#data-collected">Data Collected</a></li>
+    <li><a href="#storage">Storage</a></li>
+    <li><a href="#permissions">Permissions</a></li>
+    <li><a href="#ads">Ads</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div class="highlight">
+    <strong>Short version:</strong> BillSplitMate stores all your data locally on your device. We do not collect, transmit, or sell your personal information. The only network activity is optional ads (free users) and in-app purchases.
+  </div>
+
+  <!-- 1. Overview -->
+  <section id="overview">
+    <span class="section-number">01</span>
+    <h2>Who We Are</h2>
+    <p>BillSplitMate is developed and maintained by <strong>Yashp (Ganaka Official)</strong>, an independent developer based in India. This Privacy Policy applies to the BillSplitMate Android application ("the App").</p>
+    <p>By using the App, you agree to the practices described in this policy. If you do not agree, please discontinue use of the App.</p>
+  </section>
+
+  <!-- 2. Data Collected -->
+  <section id="data-collected">
+    <span class="section-number">02</span>
+    <h2>What Data We Collect</h2>
+    <p>The App operates primarily offline. Here is a complete breakdown of every category of data involved:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Where It Goes</th>
+          <th>Shared?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Group names, bill items, amounts, settlements</strong></td>
+          <td>Stored locally on your device only (Hive database)</td>
+          <td><span class="badge badge-green">Never shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Member names and phone numbers</strong></td>
+          <td>Stored locally on your device only</td>
+          <td><span class="badge badge-green">Never shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Contact data (if you use the contact picker)</strong></td>
+          <td>Only the selected contact's name and phone are saved locally. We never access your full contacts list.</td>
+          <td><span class="badge badge-green">Never shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Purchase / subscription data</strong></td>
+          <td>Handled entirely by Google Play Billing. We only receive confirmation of purchase status.</td>
+          <td><span class="badge badge-grey">Google Play only</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ad interaction data (free users only)</strong></td>
+          <td>Google AdMob may collect device identifiers for ad personalisation per its own privacy policy.</td>
+          <td><span class="badge badge-grey">Google AdMob only</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do <strong>not</strong> operate any servers or backend infrastructure. No data from your device is ever transmitted to us.</p>
+  </section>
+
+  <!-- 3. Local Storage -->
+  <section id="storage">
+    <span class="section-number">03</span>
+    <h2>Local Storage &amp; Data Loss Risk</h2>
+    <p>All app data is stored exclusively in the local Hive database on your device. This means:</p>
+    <ul>
+      <li><strong>Uninstalling the App</strong> permanently deletes all your groups, bills, and settlements.</li>
+      <li><strong>Clearing app data or cache</strong> (via Android Settings → Apps) permanently deletes all data.</li>
+      <li><strong>Switching to a new device</strong> will not transfer your data — there is no cloud backup.</li>
+      <li><strong>Factory resetting your phone</strong> will erase all app data.</li>
+    </ul>
+    <p>We strongly recommend using the <strong>Share Report</strong> feature (Settlement screen → share icon) to export a PDF or text summary of important groups before uninstalling or changing devices.</p>
+  </section>
+
+  <!-- 4. Permissions -->
+  <section id="permissions">
+    <span class="section-number">04</span>
+    <h2>App Permissions</h2>
+    <p>The App requests the following permissions:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why It's Needed</th>
+          <th>Required?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>READ_CONTACTS</strong></td>
+          <td>Allows you to pick a contact name and phone number when adding group members. Only the selected contact is accessed — never your full list.</td>
+          <td><span class="badge badge-grey">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>INTERNET</strong></td>
+          <td>Required to load ads (free users) and process in-app purchases via Google Play.</td>
+          <td><span class="badge badge-green">Required</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The contacts permission is entirely optional. You can add members by typing their names manually without ever granting contacts access. If denied, the contact picker feature will be unavailable but all other features work normally.</p>
+  </section>
+
+  <!-- 5. Ads -->
+  <section id="ads">
+    <span class="section-number">05</span>
+    <h2>Advertising (Free Users)</h2>
+    <p>Free users may see interstitial and banner ads served by <strong>Google AdMob</strong>. These ads are subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. AdMob may use device identifiers (such as the Android Advertising ID) to serve personalised ads.</p>
+    <p><strong>Pro subscribers</strong> see no ads whatsoever.</p>
+    <p>You can opt out of personalised ads at any time via: Android Settings → Google → Ads → "Opt out of Ads Personalisation".</p>
+  </section>
+
+  <!-- 6. In-App Purchases -->
+  <section id="purchases">
+    <span class="section-number">06</span>
+    <h2>In-App Purchases &amp; Subscriptions</h2>
+    <p>BillSplitMate Pro is offered as a monthly or yearly subscription via <strong>Google Play Billing</strong>. All payment processing, subscription management, and billing data is handled entirely by Google. We do not store or have access to your payment card details.</p>
+    <p>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing period. You can manage or cancel your subscription at any time via: Google Play → Profile → Payments &amp; subscriptions → Subscriptions.</p>
+  </section>
+
+  <!-- 7. Children -->
+  <section id="children">
+    <span class="section-number">07</span>
+    <h2>Children's Privacy</h2>
+    <p>BillSplitMate is not directed at children under the age of 13. We do not knowingly collect any personal information from children under 13. If you believe a child has provided personal information through the App, please contact us and we will take steps to delete it.</p>
+  </section>
+
+  <!-- 8. Changes -->
+  <section id="changes">
+    <span class="section-number">08</span>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    <p>Significant changes will be communicated via an in-app notice where reasonably practicable.</p>
+  </section>
+
+  <!-- 9. Contact -->
+  <section id="contact">
+    <span class="section-number">09</span>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h3>Ganaka Official (Yashp)</h3>
+        <p style="margin-bottom:4px;font-size:14px;color:#6b7280;">Independent Developer · BillSplitMate</p>
+        <a href="mailto:ganakaofficial.yp@gmail.com">ganakaofficial.yp@gmail.com</a>
+      </div>
+    </div>
+    <p style="margin-top:16px;">We aim to respond to all privacy-related enquiries within <strong>7 business days</strong>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="mailto:ganakaofficial.yp@gmail.com">Contact</a>
+  </div>
+  <p>© 2025 BillSplitMate · Developed by Ganaka Official · All rights reserved.</p>
+</footer>
+
+</body>
+</html>
